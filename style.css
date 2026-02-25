@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+   
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+/* Background layer */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("IMAGE.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(8px);
+    transform: scale(1.1); /* prevents white edges after blur */
+
+    z-index: -2;
+}
+
+/* Dark overlay for better text visibility */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    z-index: -1;
+}
+
+
+.head{
+  font-style: normal;
+  color: red;
+  text-align: center;
+  
+  margin-top: 200px;
+  text-shadow: 3px  3px 10px white;
+  stroke-width: 1px ;
+  stroke: 3px black;
+  padding-top: 10px;
+}
+.name{
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  
+}
+.main{
+  text-align:center ;
+  margin-top: 75px;
+  
+
+}
+.submit{
+  margin: 20px;
+  width: 250px;
+  height: 20px;
+  background-color: lightcoral;
+  border-radius: 20px;
+  border: none;
+  font-size: 10px;
+  font-weight: bolder;
+  box-shadow: 2px 2px 10px rgb(211, 211, 211);
+}
+.pokemon-name{
+  color: aliceblue;
+
+}
+.page{
+  
+  border-color: red;
+}
+#pokemonSprite{
+  display: block;
+  margin-left: 550px;
+  width: 150px;
+  height: 150px;
+}
